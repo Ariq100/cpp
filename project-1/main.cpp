@@ -9,15 +9,15 @@ float c2_balance, c1_balance, deposit1, withdraw1;
 
 void customer_1() 
 {
-    cout << "Enter your name: ";
+    cout << "\n\n\t\t\tEnter your name: ";
     cin >> c1_name;
-    cout << "\nEnter your Account number: ";
+    cout << "\n\n\t\t\tEnter your Account number: ";
     cin >> c1_accNo;
-    cout << "\nEnter your National Id number: ";
+    cout << "\n\n\t\t\tEnter your National Id number: ";
     cin >> c1_nId;
-    cout << "\nEnter your phone number: ";
+    cout << "\n\n\t\t\tEnter your phone number: ";
     cin >> c1_phoneNo;
-    cout << "\nEnter your current balance in your account: ";
+    cout << "\n\n\t\t\tEnter your current balance in your account: ";
     cin >> c1_balance;
 
     cout << endl;
@@ -25,25 +25,25 @@ void customer_1()
 
 void data_1() 
 {
-    cout << "CUSTOMER 1 : " << endl;
-    cout << "Name:- " << c1_name << endl;
-    cout << "Account number:- " << c1_accNo << endl;
-    cout << "NID:- " << c1_nId << endl;
-    cout << "Phone number:- " << c1_phoneNo << endl;
-    cout << "Balance:- " << c1_balance << endl << endl << endl;
+    cout << "\n\n\t\tCUSTOMER 1 : " << endl;
+    cout << "\n\n\t\t\tName:- " << c1_name << endl;
+    cout << "\n\n\t\t\tAccount number:- " << c1_accNo << endl;
+    cout << "\n\n\t\t\tNID:- " << c1_nId << endl;
+    cout << "\n\n\t\t\tPhone number:- " << c1_phoneNo << endl;
+    cout << "\n\n\t\t\tBalance:- " << c1_balance << endl << endl << endl;
 }
 
 void customer_2()
  {
-    cout << "Enter your name: ";
+    cout << "\n\n\t\t\tEnter your name: ";
     cin >> c2_name;
-    cout << "\nEnter your Account number: ";
+    cout << "\n\n\t\t\tEnter your Account number: ";
     cin >> c2_accNo;
-    cout << "\nEnter your National Id number: ";
+    cout << "\n\n\t\t\tEnter your National Id number: ";
     cin >> c2_nId;
-    cout << "\nEnter your phone number: ";
+    cout << "\n\n\t\t\tEnter your phone number: ";
     cin >> c2_phoneNo;
-    cout << "\nEnter your current balance in your account: ";
+    cout << "\n\n\t\t\tEnter your current balance in your account: ";
     cin >> c2_balance;
 
     cout << endl;
@@ -52,51 +52,51 @@ void customer_2()
 
 void data_2() 
 {
-    cout << "CUSTOMER 1 : " << endl;
-    cout << "Name:- " << c2_name << endl;
-    cout << "Account number:- " << c2_accNo << endl;
-    cout << "NID:- " << c2_nId << endl;
-    cout << "Phone number:- " << c2_phoneNo << endl;
-    cout << "Balance:- " << c2_balance << endl << endl << endl;
+    cout << "\n\n\t\tCUSTOMER 2 : \n\n";
+    cout << "\n\n\t\t\tName:- " << c2_name << endl;
+    cout << "\n\n\t\t\tAccount number:- " << c2_accNo << endl;
+    cout << "\n\n\t\t\tNID:- " << c2_nId << endl;
+    cout << "\n\n\t\t\tPhone number:- " << c2_phoneNo << endl;
+    cout << "\n\n\t\t\tBalance:- " << c2_balance << endl << endl << endl;
 }
 
 // deposit feature for 1st customer
 void deposit_1()
 {
-    cout << "Previous Amount : " << c1_balance << endl;
-    
-    cout << "Enter the ammoiunt that you want to deposit : ";
+    cout << "\n\n\t\t\tPrevious Amount : " << c1_balance << endl << endl;
+
+    cout << "\n\n\t\t\tEnter the amount that you want to deposit : ";
     cin >> deposit1;
 
     c1_balance = c1_balance + deposit1;
 
-    cout << "Your value now is : " << c1_balance << endl;
+    cout << "\n\n\n\t\t\tYour amount now is : " << c1_balance << endl << endl;
 }
 
 // deposit feature for 2nd customer
 void deposit_2()
 {
-    cout << "Previous Amount : " << c2_balance << endl;
-    
-    cout << "Enter the ammoiunt that you want to deposit : ";
+    cout << "\n\n\t\t\tPrevious Amount : " << c1_balance << endl << endl;
+
+    cout << "\n\n\t\t\tEnter the amount that you want to deposit : ";
     cin >> deposit1;
 
-    c2_balance = c2_balance + deposit1;
-
-    cout << "Your value now is : " << c2_balance << endl;
+    c1_balance = c1_balance + deposit1;
+    
+    cout << "\n\n\n\t\t\tYour amount now is : " << c1_balance << endl << endl;
 }
 
 // withdraw feature for 1st customer
 void withdraw_1()
 {
-    cout << "Previous Amount : " << c1_balance << endl;
-    
-    cout << "Enter the ammount that you want to withdraw : ";
+    cout << "\n\n\t\tPrevious Amount : " << c1_balance << endl;
+
+    cout << "\n\n\t\tEnter the amount that you want to withdraw : ";
     cin >> withdraw1;
 
     c1_balance = c1_balance - withdraw1;
 
-    cout << "Your value now is : " << c1_balance << endl;
+    cout << "\n\n\t\tYour amount now is : " << c1_balance << endl;;
 }
 
 // withdraw feature for 2nd customer
@@ -104,12 +104,12 @@ void withdraw_2()
 {
     cout << "Previous Amount : " << c2_balance << endl << endl;
     
-    cout << "Enter the ammoiunt that you want to withdraw : ";
+    cout << "Enter the amount that you want to withdraw : ";
     cin >> withdraw1;
 
     c2_balance = c2_balance - withdraw1;
 
-    cout << "Your value now is : " << c2_balance << endl << endl;
+    cout << "Your amount now is : " << c2_balance << endl << endl;
 }
 
 void delete_1()
@@ -138,15 +138,15 @@ void menu()
     {
         char selection;
 
-        cout << "MAIN MENU :- " << endl;
-        cout << "1.ADD ACCOUNT" << endl;
-        cout << "2.VIEW ACCOUNTS" << endl;
-        cout << "3.WITHDRAW ACCOUNT" << endl;
-        cout << "4.DEPOSIT ACCOUNT" << endl;
-        cout << "5.DELETE ACCOUNT" << endl;
-        cout << "6.EXIT" << endl;
+        cout << "\n\n\t\t\tMAIN MENU :- \n\n";
+        cout << "\n\n\t\t\t1.ADD ACCOUNT\n";
+        cout << "\n\n\t\t\t2.VIEW ACCOUNTS\n";
+        cout << "\n\n\t\t\t3.WITHDRAW ACCOUNT\n";
+        cout << "\n\n\t\t\t4.DEPOSIT AMOUNT\n";
+        cout << "\n\n\t\t\t5.DElETE\n";
+        cout << "\n\n\t\t\t6.EXIT\n";
 
-        cout << "\n\nSELECT: ";
+        cout << "\n\n\n\t\t\tSELECT: ";
         cin >> selection;
 
         system("cls");
@@ -155,7 +155,7 @@ void menu()
         {
             char custom_1;
 
-            cout << "ADD ACCOUNT:-\n1.(a)Customer \n2.(b)Customer \nChoice: ";
+            cout << "\n\n\t\tADD ACCOUNT:-\n\n\t\t1.(a)Customer \n\n\t\t2.(b)Customer \n\n\t\tChoice: ";
             cin >> custom_1;
 
             system("cls");
@@ -172,7 +172,7 @@ void menu()
 
             else 
             {
-                cout << "\nINVALID INPUT! PLEASE CHECK.";
+                cout << "\n\n\t\t\tINVALID INPUT! PLEASE CHECK.\n\n";
             }
         }
 
@@ -180,7 +180,7 @@ void menu()
         {
             char custom_2;
 
-            cout << "\nVIEW ACCOUNTS:- \n1.(a)customer \n2.(b)Customer 2\nChoice: ";
+            cout << "\n\n\t\tVIEW ACCOUNTS:- \n\n\t\t1.(a)customer \n\n\t\t2.(b)Customer 2\n\n\t\twhich account you want to view from?? : ";
             cin >> custom_2;
 
             system("cls");
@@ -197,7 +197,7 @@ void menu()
 
             else 
             {
-                cout << "\nINVALID INPUT! PLEASE CHECK.";
+                cout << "\n\n\t\t\tINVALID INPUT! PLEASE CHECK.\n\n";
             }
         }
 
@@ -205,7 +205,7 @@ void menu()
         {
             char withdrawAcc;
 
-            cout << "\nACCOUNTS:- \n1.(a)Customer \n2.(b)Customer \n  which account do you want to with draw from? ";
+            cout << "\n\n\t\tACCOUNTS:- \n\n\t\t1.(a)Customer \n\n\t\t2.(b)Customer \n\n\t\twhich account do you want to withdraw from : ";
             cin >> withdrawAcc;
 
             if (withdrawAcc == 'a' || withdrawAcc == '1')
@@ -217,13 +217,19 @@ void menu()
             {
                 withdraw_2();
             }
+
+            else
+            {
+                cout << "\n\n\t\t\tINVALID INPUT! PLEASE CHECK.\n\n";
+            }
+            
         }
 
         else if (selection == '4')
         {
             char deposit2;
 
-            cout << "\nACCOUNTS:- \n1.(a)Customer \n2.(b)Customer \n  which account do you want to deposit to? : ";
+            cout << "\n\n\t\tACCOUNTS:- \n\n\t\t1.(a)Customer \n\n\t\t2.(b)Customer \n\n\t\twhich account do you want to deposit to : ";
             cin >> deposit2;
 
             if (deposit2 == '1' || deposit2 == 'a')
@@ -235,14 +241,20 @@ void menu()
             {
                 deposit_2();
             }
+
+            else
+            {
+                cout << "\n\n\t\t\tINVALID INPUT! PLEASE CHECK.\n\n";
+            }
+            
         }
 
         else if (selection == '5')
         {
             char delete1;
 
-            cout << "(BECAREFUL THE ACCOUNT WILL BE DELETED PERMANENTLY)" << endl;
-            cout << "\nACCOUNTS:- \n1.(a)Customer \n2.(b)Customer \n  which account do you want to delete : ";
+            cout << "\n\n\t\t(BECAREFUL THE ACCOUNT WILL BE DELETED PERMANENTLY)" << endl;
+            cout << "\n\n\t\tACCOUNTS:- \n\n\t\t1.(a)Customer \n\n\t\t2.(b)Customer \n\n\t\twhich account do you want to delete : ";
             cin >> delete1;
 
             if (delete1 == 'a' || delete1 == '1')
@@ -254,17 +266,22 @@ void menu()
             {
                 delete_2();
             }
+
+            else
+            {
+                cout << "\n\n\t\t\tINVALID INPUT! PLEASE CHECK.\n\n";
+            }
         }
         
         else if (selection == '6') 
         {
-            cout << "\nTHANK YOU FOR USING !";
+            cout << "\n\n\n\n\t\t\tTHANK YOU FOR USING ! \n\n\n\n";
             break;
         }
 
         else
         {
-            cout << "Invalid Input!!!! TRY AGAIN" << endl;
+            cout << "\n\n\t\t\tINVALID INPUT! PLEASE CHECK.\n\n";
         }
 
         system("Pause");
@@ -274,7 +291,7 @@ void menu()
 
 int main()
 {
-    cout << "\nBANKING MANAGEMENT SYSTEM\n\n~~~~~~GROUP WORK~~~~~~\n\n";
+    cout << "\n\n\t\t\tBANKING MANAGEMENT SYSTEM\n\n\t\t\t~~~~~~GROUP WORK~~~~~~\n\n\t\t\t" << endl;
 
     system("Pause");
     system("cls");
