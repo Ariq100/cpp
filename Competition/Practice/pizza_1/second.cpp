@@ -5,24 +5,29 @@
 using namespace std;
 
 char select, select1, option;
-string team1, team2, team3;
+// string team1, team2, team3;
+string onion = "onion",pepper = "pepper", mushroom = "mushroom", olive = "olive", basil = "basil", chicken = "chicken", tomato = "tomato";
 
-class Pizza
-{
-    private:
-        int pizza0, pizza1, pizza2, pizza3, pizza4;
+// class Pizza
+// {
+//     private:
+//         int onion, pepper, mushroom, olive, basil, chicken, tomato;
 
-    public:
-        void setPizza0(int p0) {pizza0 = p0;} int getPizza0() {return pizza0;}
+//     public :
+//         void setOnion(int p0) {onion = p0;} int onion() { return onion; }
 
-        void setPizza1(int p1) {pizza1 = p1;} int getPizza1() {return pizza1;}
+//         void setPepper(int p1) {pepper = p1;} int getpepper() {return pepper;}
 
-        void setPizza2(int p2) {pizza2 = p2;} int getPizza2() {return pizza2;}
+//         void setMushroom(int p2) {mushroom = p2;} int getMushroom() {return mushroom;}
 
-        void setPizza3(int p3) {pizza3 = p3;} int getPizza3() { return pizza3;}
+//         void setolive(int p3) {olive = p3;} int getolive() { return olive;}
 
-        void setPizza4(int p4) {pizza4 = p4;} int getPizza4() {return pizza4;}
-};
+//         void setBasil(int p4) {basil = p4;} int getBasil() {return basil;}
+
+//         void setChicken(int p5) {chicken = p5;} int getChicken() {return chicken;} 
+
+//         void setTomato(int p6) {tomato = p6;} int getTomato() {return tomato;}
+// };
 
 void menu()
 {
@@ -60,6 +65,7 @@ void order()
                 cout << "chicken, mushroom, pepper" << endl;
                 cout << "Your order has been taken............" << endl;
             }
+            
             else if (select != select1)
             {
                 select1 = select;
@@ -67,6 +73,7 @@ void order()
                 cout << "Your order has been taken............" << endl;
             }
         }
+        
         else if (select == '3')
         {
             if (select == select1)
@@ -75,6 +82,7 @@ void order()
                 cout << "tomato, mushroom, basil" << endl;
                 cout << "Your order has been taken............" << endl;
             }
+            
             else if (select != select1)
             {
                 select1 = select;
@@ -82,6 +90,7 @@ void order()
                 cout << "Your order has been taken............" << endl;
             }
         }
+        
         else if (select == '5')
         {
             cout << "Thanks for using!!!!!!" << endl;
