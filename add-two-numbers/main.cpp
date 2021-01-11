@@ -9,17 +9,9 @@ int main()
 
     int z[t];
 
-    for (int i = 0; i < t; i++)
-    {
-        cin >> a >> b;
+    for (int i = 0; i < t; i++){cin >> a >> b; z[i] = a + b;}
 
-        z[i] = a + b;
-    }
-
-    for (int i = 0; i < t; i++)
-    {
-        cout << z[i] << endl;
-    }
+    for (int i = 0; i < t; i++){cout << z[i] << endl;}
 
     return 0;
 }
