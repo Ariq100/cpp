@@ -9,8 +9,6 @@ int main()
 
     cin >> t;
 
-    // int z[t];
-
     for (int i = 0; i < t; i++){cin >> a >> b; d.push_back(a + b);}
 
     for (int i = 0; i < t; i++){cout << d[i] << endl;}
