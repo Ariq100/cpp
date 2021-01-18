@@ -2,11 +2,11 @@
 #include <vector>
 using namespace std;
 
-int main() {
-
-    int t, n, a = 0, m;
+int main() 
+{
+    int t, n, r = 0, m;
     vector<string> x;
-    
+
     cin >> t;
 
     while(t > 0)
@@ -17,18 +17,19 @@ int main() {
 
         while(n != 0)
         {
-            a = (a * 10) + (n % 10);
+            r = (r * 10) + (n % 10);
             n = n / 10;
         }
-
-        if (m == a) x.push_back("Wins");
-
-        else x.push_back("Loses");
         
-        a = 0;
-        t--;
-    }
+        if(m == r) x.push_back("wins");
+
+        else x.push_back("loses");
+        
+        r = 0;
+        t-- ;
+        }
 
     for (int i = 0; i < x.size(); i++) cout << x[i] << endl;
-    return 0;
+
+	return 0;
 }
