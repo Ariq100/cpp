@@ -32,4 +32,4 @@ int main()
     for (int i = 0; i < x.size(); i++) cout << x[i] << endl;
 
 	return 0;
-}
+}// amr net gese , kalke fist and last digit korbo
