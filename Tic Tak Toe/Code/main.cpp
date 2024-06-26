@@ -3,8 +3,6 @@
 using namespace std;
 
 string input_arr[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
-string UserInput[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
-string ComInput[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
 
 void DrawBoard()
 {
@@ -27,43 +25,89 @@ bool CheckBoard(int input)
     }
 }
 
-bool CheckWinOrDraw()
+string CheckWinOrDraw()
 {
-    
+    int win;
+
+    for(int i = 0; i < 3; i++)
+    {
+        if((input_arr[i] == input_arr[i+1]) && (input_arr[i] == input_arr[i + 2]))
+        {
+            win = input_arr[i];
+        }
+    }
+
+    for(int i = 0; i < 3; i++)
+    {
+        if((input_arr[i] == input_arr[i+3]) && (input_arr[i] == input_arr[i+6]))
+        {
+            win = input_arr[i];
+        }
+    }
+
+    if((input_arr[0] == input_arr[4]) && (input_arr[0] == input_arr[8]))
+    {
+        win = input_arr[i];
+    }
+    else if((input_arr[2] == input_arr[4]) && (input_arr[2] == input_arr[6]))
+    {
+        win = input_arr[2];
+    }
+
+    return win;
 }
 
 int main()
 {
-    int input.slot;
+    int input_slot;
     bool decided = false;
+    string win;
+
+    win = " ";
 
     while (decided == false)
-    {       
+    {
         DrawBoard();
         cout << "Input which slot do you want to cross" << endl;
-        cin >> input.slot;
+        cin >> input_slot;
 
         system.cls();
-        while(CheckBoard(input.slot) == false)
+        while(CheckBoard(input_slot) == false)
         {
             DrawBoard();
-            cout << "Cannot cross there, enter again!!" << endl;
-            cin >> input.slot;
+            cout << "\n\nCannot cross there, enter again!!" << endl;
+            cin >> input_slot;
             system.cls();
         }
 
-        input_arr[input.slot] = " X ";
+        input_arr[input_slot] = "X";
         DrawBoard();
         system.cls();
 
-        input.slot = rand() % 9;
+        input_slot = rand() % 9;
 
-        while(CheckBoard(input.slot) == false)
+        while(CheckBoard(input_slot) == false)
         {
             input.slot = rand() % 9;
         }
 
-        input_arr[input.slot] = " O ";
+        input_arr[input_slot] = "O";
+
+        win = CheckWinOrDraw();
+
+        if(win != " ")
+        {
+            decided = true;
+        }
+    }
+
+    if(win == "X")
+    {
+        cout << "You Win!!!" << endl;
+    }
+    else 
+    {
+        cout << "You suck!!" << endl;
     }
     
     return 0;
