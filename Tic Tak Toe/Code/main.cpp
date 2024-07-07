@@ -6,11 +6,11 @@ string input_arr[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
 
 void DrawBoard()
 {
-    cout << input_arr[0] << " | " << input_arr[1] << " | " input_arr[2] << endl;
+    cout << input_arr[0] << " | " << input_arr[1] << " | " << input_arr[2] << endl;
     cout << "---------" << endl;
-    cout << input_arr[3] << " | " << input_arr[4] << " | " input_arr[5] << endl;
+    cout << input_arr[3] << " | " << input_arr[4] << " | " << input_arr[5] << endl;
     cout << "---------" << endl;
-    cout << input_arr[6] << " | " << input_arr[7] << " | " input_arr[8] << endl;
+    cout << input_arr[6] << " | " << input_arr[7] << " | " << input_arr[8] << endl;
 }
 
 bool CheckBoard(int input)
@@ -27,7 +27,7 @@ bool CheckBoard(int input)
 
 string CheckWinOrDraw()
 {
-    int win;
+    string win;
 
     for(int i = 0; i < 3; i++)
     {
@@ -47,7 +47,7 @@ string CheckWinOrDraw()
 
     if((input_arr[0] == input_arr[4]) && (input_arr[0] == input_arr[8]))
     {
-        win = input_arr[i];
+        win = input_arr[1];
     }
     else if((input_arr[2] == input_arr[4]) && (input_arr[2] == input_arr[6]))
     {
@@ -71,24 +71,24 @@ int main()
         cout << "Input which slot do you want to cross" << endl;
         cin >> input_slot;
 
-        system.cls();
+        system("CLS");
         while(CheckBoard(input_slot) == false)
         {
             DrawBoard();
             cout << "\n\nCannot cross there, enter again!!" << endl;
             cin >> input_slot;
-            system.cls();
+            system("CLS");
         }
 
         input_arr[input_slot] = "X";
         DrawBoard();
-        system.cls();
+        system("CLS");
 
         input_slot = rand() % 9;
 
         while(CheckBoard(input_slot) == false)
         {
-            input.slot = rand() % 9;
+            input_slot = rand() % 9;
         }
 
         input_arr[input_slot] = "O";
